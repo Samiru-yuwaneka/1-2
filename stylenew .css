@@ -1,0 +1,65 @@
+.headerBar {
+    background-color: darkblue;
+    color: white;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.footerBar {
+    background-color: darkblue;
+    color: white;
+    width: 100%;
+    float: inline-end;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sideBar {
+    background-color: aqua;
+    width: 20%;
+    float: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+img{
+    border: solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px gray;
+    width: 50%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.mainTextArea{
+    width: 75%;
+    float: right;
+    margin-left: -5px;
+}
+
+h2 {
+    color: dodgerblue;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.detail{
+    font-style: italic;
+}
+
+.intro {
+    background-color: blueviolet;
+    box-shadow: 2px 2px 2px gray;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+

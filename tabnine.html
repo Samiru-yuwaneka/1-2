@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Salary System</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<script>
+    function calcTotalEarning() {
+        var salary = parseFloat(document.salaryform.sal.value) || 0;
+        var additionalAllowance = parseFloat(document.salaryform.ama.value) || 0;
+        var costOfLiving = parseFloat(document.salaryform.col.value) || 0;
+        
+        var totalEarnings = salary + additionalAllowance + costOfLiving;
+        
+        document.salaryform.te.value = totalEarnings.toFixed(2);
+    }
+    
+    function calcPayee() {
+        var totalEarnings = parseFloat(document.salaryform.te.value) || 0;
+        var tax = 0;
+        
+        if (totalEarnings > 200000) {
+            tax = (totalEarnings - 200000) * 0.12 + 6000;
+        } else if (totalEarnings > 100000) {
+            tax = (totalEarnings - 100000) * 0.06;
+        }
+        
+        document.salaryform.paye.value = tax.toFixed(2);
+    }
+    
+    function calcPF() {
+        var totalEarnings = parseFloat(document.salaryform.te.value) || 0;
+        var pf = totalEarnings * 0.10;
+        
+        document.salaryform.pf.value = pf.toFixed(2);
+    }
+    
+    function calcTotalDeductions() {
+        var loan = parseFloat(document.salaryform.loan.value) || 0;
+        var payeTax = parseFloat(document.salaryform.paye.value) || 0;
+        var pf = parseFloat(document.salaryform.pf.value) || 0;
+        
+        var totalDeductions = loan + payeTax + pf;
+        
+        document.salaryform.td.value = totalDeductions.toFixed(2);
+    }
+    
+    function calcNetSalary() {
+        var totalEarnings = parseFloat(document.salaryform.te.value) || 0;
+        var totalDeductions = parseFloat(document.salaryform.td.value) || 0;
+        
+        var netSalary = totalEarnings - totalDeductions;
+        
+        document.salaryform.ns.value = netSalary.toFixed(2);
+    }
+    </script>
+
